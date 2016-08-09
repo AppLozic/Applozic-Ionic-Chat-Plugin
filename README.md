@@ -1,11 +1,16 @@
 Applozic Ionic Chat Plugin
 ==========================
 
+Applozic powers real time messaging across any device, any platform & anywhere in the world. Integrate our simple SDK to engage your users with image, file, location sharing and audio/video conversations.
+
+Signup at [Applozic](https://www.applozic.com/) to get your application key.    
 
 
-1. Copy /www/lib/applozic folder in your project's lib folder.
+####Step 1: Copy /www/lib/applozic folder in your project's lib folder.
 
-2. Add in html page header  <!-- Applozic -->
+####Step 2: Add in html page header
+
+```
   <link href="lib/applozic/css/mck-combined.min.css" rel="stylesheet">
   <link href="lib/applozic/css/app/mck-sidebox-1.0.css" rel="stylesheet">
   
@@ -21,11 +26,11 @@ Applozic Ionic Chat Plugin
       }
   </script>
   <script src="lib/applozic/js/jquery-2.2.2.min.js"></script>
-  
-  <!-- Applozic -->
+  ```
 
-  3.  Add the following before the closing of </body>
+####Step 3: Add the following before the closing of </body>
 
+```
     <script type="text/javascript" src="lib/applozic/js/mck-ui-plugins.min.js"></script>
     <script type="text/javascript" src="lib/applozic/js/mck-ui-widget.min.js"></script>
     <script type="text/javascript" src="lib/applozic/js/mck-emojis.min.js"></script>
@@ -50,12 +55,16 @@ Applozic Ionic Chat Plugin
                 }
             }
     </script>
+```
 
-  4. Login/Register User
+
+####Step4: Login/Register User
+
+```
   $applozic.fn.applozic({
-    appId: "applozic-sample-app",      //Get your application key from https://www.applozic.com
-    userId: "demo1",                     //Logged in user's id, a unique identifier for user
-    userName: "Demo user",                 //User's display name
+    appId: applozicApplicationKey,      //Get your application key from https://www.applozic.com
+    userId: userId,                     //Logged in user's id, a unique identifier for user
+    userName: username,                 //User's display name
     imageLink : '',                     //User's profile picture url
     email : '',                         //optional
     contactNumber: '',                  //optional, pass with internationl code eg: +16508352160
@@ -80,3 +89,166 @@ Applozic Ionic Chat Plugin
          return "";
    }
   });
+```
+
+
+#### Step 5: Initiate chat with other user
+
+To initiate chat with another user using userId:
+``` 
+  $applozic.fn.applozic('loadTab', otherUserId);
+```
+
+Alternatively, you can add a chat button inside your web page using a tag and use 'userId' of the other user for data attribute "data-mck-id"
+
+``` 
+  <a href="#" class="applozic-launcher" data-mck-id="PUT_OTHER_USERID_HERE" data-mck-name="PUT_OTHER_USER_DISPLAY_NAME_HERE">CHAT BUTTON</a>
+``` 
+
+To open the chat list:
+``` 
+  $applozic.fn.applozic('loadTab', '');
+``` 
+
+
+#### Step 6: Populate contact list
+
+Javascript code to load contacts
+
+```
+$applozic.fn.applozic('loadContacts', {"contacts": [{"userId": "USER_1", "displayName": "Devashish",
+                          "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"},
+                        {"userId": "USER_2", "displayName": "Adarsh",
+                          "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"},
+                        {"userId": "USER_3", "displayName": "Shanki",
+                          "imageLink": "https://www.applozic.com/resources/images/applozic_icon.png"}
+                        ]
+         });
+```
+
+**NOTE**- Call **loadContacts** function only after plugin initailize callback (see Step 2 onInit function for reference).
+
+
+#### Step 7: Context (Topic) based Chat
+ 
+ Add the following in window.applozic.init call:
+ 
+ ```
+  topicBox: true,
+  getTopicDetail: function(topicId) {
+         //Based on topicId, return the following details from your application
+         return {'title': 'topic-title',      // Product title
+                     'subtitle': 'sub-title',     // Product subTitle or Product Id
+                     'link' :'image-link',        // Product image link
+                     'key1':'key1' ,              // Small text anything like Qty (Optional)
+                     'value1':'value1',           // Value of key1 ex-10 (number of quantity) Optional
+                     'key2': 'key2',              // Small text anything like MRP (product price) (Optional)
+                     'value2':'value2'            // Value of key2 ex-$100  (Optional)
+                  };
+  }
+ ```
+ 
+ Add a chat button inside your web page using ```a``` tag and add the following:
+ 
+ ```
+ Class Attribute - applozic-wt-launcher 
+ Data Attriutes  - mck-id, mck-name and mck-topicid
+```
+
+```
+ mck-id      :  User Id of the user with whom to initiate the chat
+ mck-name    :  Display name of the user with whom to initiate the chat
+ mck-topicId :  Unique identifier for the topic/product 
+ ```
+ 
+ ```
+ <a href="#" class="applozic-wt-launcher" data-mck-id="PUT_USERID_HERE" data-mck-name="PUT_DISPLAYNAME_HERE" data-mck-topicid="PUT_TOPICID_HERE">CHAT ON TOPIC</a>
+ ```
+
+
+#### Step 8: Group Messaging
+Group have 2 identifiers:
+groupId: Auto generated by Applozic
+clientGroupId (optional): In case if you already have group identifier on your applicaiton side, use clientGroupId in all functions.
+
+
+##### Open group chat
+
+```
+ $applozic.fn.applozic('loadGroupTab', groupId);  // group Id returned in response to group create api  
+ ``` 
+ 
+Open group chat using Client Group Id
+ 
+```
+ $applozic.fn.applozic('loadGroupTabByClientGroupId',{'clientGroupId':clientGroupId});
+```
+
+
+##### Create Group
+ 
+ ```
+$applozic.fn.applozic('initGroupTab', {'groupName' : groupName,   // required
+                                       'type' : 1,                // 1 for private , 2 for public (required)
+                                       'clientGroupId' : '',      // optional
+                                       'users': [{userId:userId1, displayName:''},
+                                                 {userId:userId2, displayName:''}
+                                                ]}); 
+ ``` 
+ 
+##### Add User to Group (only for Group Admin)
+ ```
+$applozic.fn.applozic('addGroupMember',{'groupId': groupId,
+                                        'clientGroupId': clientGroupId, //use either groupId or clientGroupId
+                                        'userId': userIdToAdd,
+                                        'callback': function(response) {console.log(response);}
+                                        });
+ ``` 
+ 
+##### Remove User from Group (only for Group Admin)
+ ```
+$applozic.fn.applozic('removeGroupMember',{'groupId': groupId,
+                                          'clientGroupId' : clientGroupId, //use either groupId or clientGroupId
+                                          'userId': userIdToRemove,         
+                                          'callback': function(response) {console.log(response);}
+                                          });
+ ```  
+ 
+##### Leave Group
+ ```
+$applozic.fn.applozic('leaveGroup', {'groupId' : groupId,
+                                     'clientGroupId' : clientGroupId, //use either groupId or clientGroupId
+                                     'callback' :function(response){console.log(response);}
+                                     });
+ ``` 
+  
+##### Update Group 
+ ```
+$applozic.fn.applozic('updateGroupInfo', {'groupId' : groupId
+                                     'clientGroupId' : clientGroupId, //use either groupId or clientGroupId,
+                                     'name' : groupName, // optional
+                                     'imageUrl' : '',  //optional
+                                     'callback' : function(response){console.log(response);}});
+ ```  
+  
+##### Get group list
+ 
+ ```
+ $applozic.fn.applozic('getGroupList', {'callback':function (response) { //write your logic}});   
+ ``` 
+ 
+Sample response:
+
+```
+           {'status' : 'success' ,                 // or error
+            'data': [ {'id': groupId,
+                       'name' : groupName',
+                       'type' : '2',               // 1,2 or 5   (private, public or broadcast)
+                       'memberName':[],           // Array of group member ids
+                       'adminName': '',           // Put group admin's userId
+                       'removedMembersId' [],     // Array including removed or left members Id  
+                       'unreadCount' : '10'       // total unread count of messages for current logged in user
+                        }]    
+                     }]
+           }
+```
