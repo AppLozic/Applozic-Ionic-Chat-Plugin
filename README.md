@@ -28,7 +28,7 @@ Signup at [Applozic](https://www.applozic.com/) to get your application key.
   <script src="lib/applozic/js/jquery-2.2.2.min.js"></script>
   ```
 
-####Step 3: Add the following before the closing of </body>
+####Step 3: Add the following before the closing of '</body>'
 
 ```
     <script type="text/javascript" src="lib/applozic/js/mck-ui-plugins.min.js"></script>
