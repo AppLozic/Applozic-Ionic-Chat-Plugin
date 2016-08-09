@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+
+.mck-box-top {
+    /* display:none !important;*/
+}
+
+.mck-sidebox.fade.in {
+    width: 100% !important;
+}
+
+.mck-box-dialog {
+    width: 100% !important;
+}
+
+.mck-sidebox-launcher {
+    display: none;
+}
