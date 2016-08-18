@@ -252,3 +252,29 @@ Sample response:
                      }]
            }
 ```
+
+
+
+
+#### Step 9: Push notification Setup
+
+```
+    var userPxy = {
+		    'applicationId': 'APPLICATION_KEY', // Replace APPLICATION_KEY with the Application key received after Signup from https://www.applozic.com/signup.html
+		    'userId': 'USER_ID', // Replace USER_ID with the user's unique identifier
+		    'registrationId': 'GCM_REGISTRATION_ID', //Replace GCM_REGISTRATION_ID with GCM registration id
+		    'pushNotificationFormat' : '2',
+		    'appVersionCode': '106' 
+		  };
+		
+		$.ajax({
+	      url: "https://apps.applozic.com/rest/ws/register/client",
+				type: 'post',
+				data: w.JSON.stringify(userPxy),
+				contentType: 'application/json',
+				headers: {'Application-Key': 'APPLICATION_KEY'}, // Replace APPLICATION_KEY with the Application key received after Signup from https://www.applozic.com/signup.html
+				    success: function (result) {
+				        //console.log(result);
+				    }
+		});
+```
