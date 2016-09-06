@@ -19,6 +19,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    var push = new Ionic.Push({});
+
+    push.register(function(token) {
+      // Log out your device token (Save this!)
+      console.log("Got Token:",token.token);
+    });
+
   });
 })
 
@@ -32,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
+  .state('app.chat', {
+        url: '/chat',
+        views: {
+                'menuContent': {
+                  templateUrl: 'templates/chat.html',
+                  controller: 'ChatCtrl'
+                }
+              }
+      })
+
     .state('app.playlists', {
       url: '/playlists',
       views: {
@@ -40,17 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'PlaylistsCtrl'
         }
       }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/chat');
 });

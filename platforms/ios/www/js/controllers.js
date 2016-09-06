@@ -41,6 +41,49 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('ChatCtrl', function($scope) {
+   // console.log("chat controller");
+ /*   (function(d, m){var s, h;       
+   s = document.createElement("script");
+   s.type = "text/javascript";
+   s.async=true;
+   s.src="https://apps.applozic.com/sidebox.app";
+   h=document.getElementsByTagName('head')[0];
+   h.appendChild(s);
+   window.applozic=m;
+   m.init=function(t){m._globals=t;}})(document, window.applozic || {});*/
+   
+  $applozic.fn.applozic({
+    appId: "applozic-sample-app",      //Get your application key from https://www.applozic.com
+    userId: "demo1",                     //Logged in user's id, a unique identifier for user
+    userName: "Demo user",                 //User's display name
+    imageLink : '',                     //User's profile picture url
+    email : '',                         //optional
+    contactNumber: '',                  //optional, pass with internationl code eg: +16508352160
+    desktopNotification: true,
+    notificationIconLink: 'https://www.applozic.com/favicon.ico',    //Icon to show in desktop notification, replace with your icon
+    authenticationTypeId: '1',          //1 for password verification from Applozic server and 0 for access Token verification from your server
+    accessToken: '',                    //optional, leave it blank for testing purpose, read this if you want to add additional security by verifying password from your server https://www.applozic.com/docs/configuration.html#access-token-url
+    onInit : function(response) {
+       if (response === "success") {
+          // login successful, perform your actions if any, for example: load contacts, getting unread message count, etc
+            $applozic.fn.applozic('loadTab', '');
+        } else {
+          // error in user login/register (you can hide chat button or refresh page)
+       }
+   },
+   contactDisplayName: function(otherUserId) {
+         //return the display name of the user from your application code based on userId.
+         return "";
+   },
+   contactDisplayImage: function(otherUserId) {
+         //return the display image url of the user from your application code based on userId.
+         return "";
+   }
+  });
+   
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
