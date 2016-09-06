@@ -5,7 +5,7 @@ Applozic powers real time messaging across any device, any platform & anywhere i
 
 Signup at [https://www.applozic.com/signup.html](https://www.applozic.com/signup.html?utm_source=github&utm_medium=readme&utm_campaign=ionic) to get the application key.
 
-Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://www.applozic.com/docs/ionic-chat-plugin.html?utm_source=github&utm_medium=readme&utm_campaign=android)
+Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://www.applozic.com/docs/ionic-chat-plugin.html?utm_source=github&utm_medium=readme&utm_campaign=ionic)
 
 
 ###Getting Started
