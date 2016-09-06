@@ -3,8 +3,12 @@ Applozic Ionic Chat Plugin
 
 Applozic powers real time messaging across any device, any platform & anywhere in the world. Integrate our simple SDK to engage your users with image, file, location sharing and audio/video conversations.
 
-Signup at [Applozic](https://www.applozic.com/) to get your application key.    
+Signup at [https://www.applozic.com/signup.html](https://www.applozic.com/signup.html?utm_source=github&utm_medium=readme&utm_campaign=ionic) to get the application key.
 
+Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://www.applozic.com/docs/ionic-chat-plugin.html?utm_source=github&utm_medium=readme&utm_campaign=android)
+
+
+###Getting Started
 
 ####Step 1: Copy /www/lib/applozic folder in your project's lib folder.
 
