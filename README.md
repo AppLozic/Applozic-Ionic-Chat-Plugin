@@ -288,3 +288,5 @@ Sample response:
 ###Documentation:
 For advanced options and customization, visit [Applozic Ionic Chat & Messaging Plugin Documentation](https://www.applozic.com/docs/ionic-chat-plugin.html?utm_source=github&utm_medium=readme&utm_campaign=ionic)
 
+###Free Ionic Framework for Chat
+Special plans for startup and open source contributors, write to us at github@applozic.com 
