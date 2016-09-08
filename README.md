@@ -42,6 +42,7 @@ Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://ww
     <script type="text/javascript"
     src="https://maps.google.com/maps/api/js?key=AIzaSyDKfWHzu9X7Z2hByeW4RRFJrD9SizOzZt4&libraries=places"></script>
     <script type="text/javascript" src="lib/applozic/js/locationpicker.jquery.min.js"></script>
+    <script type="text/javascript" src="lib/applozic/js/app/mck-common-1.0.js"></script>
     <script type="text/javascript" src="lib/applozic/js/app/mck-sidebox-1.0.js"></script>
     <script type="text/javascript">
             var oModal = "";
