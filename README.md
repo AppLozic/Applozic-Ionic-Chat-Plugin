@@ -10,7 +10,7 @@ Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://ww
 
 ###Getting Started
 
-####Step 1: Copy /www/lib/applozic folder in your project's lib folder.
+####Step 1: Copy [/lib/applozic](https://github.com/AppLozic/Applozic-Ionic-Chat-Plugin/tree/master/www/lib/applozic) folder in your project's lib folder.
 
 ####Step 2: Add in html page header
 
