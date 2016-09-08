@@ -1,9 +1,9 @@
 /* Empty. Add your own CSS if you like */
 
 
-.mck-sidebox {
+/*.mck-sidebox {
   top: 54px !important;
-}
+}*/
 
 /*
 .mck-box-top {
@@ -20,4 +20,9 @@
 
 .mck-sidebox-launcher {
     display: none;
+}
+
+#mck-sidebox {
+    height: calc(100% - 54px) !important;
+    top: 54px;
 }
