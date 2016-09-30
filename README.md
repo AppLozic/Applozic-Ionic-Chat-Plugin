@@ -269,6 +269,7 @@ Sample response:
 		    'userId': 'USER_ID', // Replace USER_ID with the user's unique identifier
 		    'registrationId': 'GCM_REGISTRATION_ID', //Replace GCM_REGISTRATION_ID with GCM registration id
 		    'pushNotificationFormat' : '2',
+		    'deviceType': '1',       //1 for Android, 4 for iOS
 		    'deviceApnsType' : '1', //1 for Distribution and 0 for Development APNS Certificate
 		    'appVersionCode': '106' 
 		  };
