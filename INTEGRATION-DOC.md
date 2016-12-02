@@ -1,5 +1,5 @@
 #### Step 1: Download plugin
-Copy [applozic folder](https://github.com/AppLozic/Applozic-Ionic-Chat-Plugin/tree/master/www/applozic) containing js and css files into your project folder.
+Copy [applozic folder](https://github.com/AppLozic/Applozic-Ionic-Chat-Plugin/tree/master/www/lib/applozic) containing js and css files into your project folder.
 
 #### Step 2: Add plugin
 Add the following under ```<head>``` tag:
