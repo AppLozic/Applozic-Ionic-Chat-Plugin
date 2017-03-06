@@ -42,17 +42,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatCtrl', function($scope) {
-   // console.log("chat controller");
- /*   (function(d, m){var s, h;       
-   s = document.createElement("script");
-   s.type = "text/javascript";
-   s.async=true;
-   s.src="https://apps.applozic.com/sidebox.app";
-   h=document.getElementsByTagName('head')[0];
-   h.appendChild(s);
-   window.applozic=m;
-   m.init=function(t){m._globals=t;}})(document, window.applozic || {});*/
-   
+
+  $scope.changeView = function(view){
+          $location.path(view); // path not hash
+      }
+
   $applozic.fn.applozic({
     appId: "applozic-sample-app",      //Get your application key from https://www.applozic.com
     userId: "demo1",                     //Logged in user's id, a unique identifier for user
@@ -81,7 +75,7 @@ angular.module('starter.controllers', [])
          return "";
    }
   });
-   
+
 })
 
 .controller('PlaylistsCtrl', function($scope) {

@@ -1,0 +1,26 @@
+{
+  "name": "Number.isNaN",
+  "version": "0.1.1",
+  "homepage": "https://github.com/leonderijke/Number.isNaN",
+  "authors": [
+    "Leon de Rijke"
+  ],
+  "description": "A `Number.isNaN` polyfill, based on the ECMAScript 6 specification.",
+  "main": "isnan.js",
+  "keywords": [
+    "number",
+    "nan",
+    "es6",
+    "ecmascript",
+    "polyfill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "testling.html"
+  ]
+}

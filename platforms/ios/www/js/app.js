@@ -20,12 +20,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       StatusBar.styleDefault();
     }
 
+/*
     var push = new Ionic.Push({});
 
     push.register(function(token) {
       // Log out your device token (Save this!)
       console.log("Got Token:",token.token);
     });
+    */
 
   });
 })
