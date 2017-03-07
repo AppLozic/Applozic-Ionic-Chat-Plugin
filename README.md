@@ -17,6 +17,7 @@ Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://ww
 ```
   <link href="lib/applozic/css/mck-combined.min.css" rel="stylesheet">
   <link href="lib/applozic/css/app/mck-sidebox-1.0.css" rel="stylesheet">
+  <link href="lib/applozic/css/app/mck-mobile-fullview.css" rel="stylesheet">
   
   <link href="lib/applozic/css/app/style.css" rel="stylesheet">
 
