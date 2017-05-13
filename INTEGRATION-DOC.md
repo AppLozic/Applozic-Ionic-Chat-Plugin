@@ -8,6 +8,7 @@ Dependending on your project, you can choose either of the two.
 ### Cordova Chat Plugin
 
 For Cordova plugin, refer to the documentation at: https://github.com/AppLozic/Applozic-Cordova-PhoneGap-Chat-Plugin/blob/master/README.md
+Applozic Cordova plugin works with Ionic 2.
 
 
 ### Ionic web based Chat Plugin
