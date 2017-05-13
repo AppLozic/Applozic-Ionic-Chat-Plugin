@@ -8,11 +8,11 @@ Signup at [https://www.applozic.com/signup.html](https://www.applozic.com/signup
 Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://www.applozic.com/docs/ionic-chat-plugin.html?utm_source=github&utm_medium=readme&utm_campaign=ionic)
 
 
-###Getting Started
+### Getting Started
 
-####Step 1: Copy [/lib/applozic](https://github.com/AppLozic/Applozic-Ionic-Chat-Plugin/tree/master/www/lib/applozic) folder in your project's lib folder.
+#### Step 1: Copy [/lib/applozic](https://github.com/AppLozic/Applozic-Ionic-Chat-Plugin/tree/master/www/lib/applozic) folder in your project's lib folder.
 
-####Step 2: Add in html page header
+#### Step 2: Add in html page header
 
 ```
   <link href="lib/applozic/css/mck-combined.min.css" rel="stylesheet">
@@ -642,7 +642,7 @@ Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://ww
   	</div>
   ```
 
-####Step 4: Add the following before the closing of '</body>'
+#### Step 4: Add the following before the closing of '</body>'
 
 ```
     <script type="text/javascript" src="lib/applozic/js/mck-ui-plugins.min.js"></script>
@@ -673,7 +673,7 @@ Documentation: [Applozic Ionic Chat & Messaging Plugin Documentation](https://ww
 ```
 
 
-####Step 5: Login/Register User
+#### Step 5: Login/Register User
 
 ```
   $applozic.fn.applozic({
