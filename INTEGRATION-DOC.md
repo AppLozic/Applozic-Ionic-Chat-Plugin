@@ -1,3 +1,18 @@
+Applozic provides the following 2 ways to integrate Chat into Ionic apps:
+
+1. Cordova plugin.
+2. Web based (html, javascript, css) based Chat for Ionic and 
+
+Dependending on your project, you can choose either of the two.
+
+### Cordova Chat Plugin
+
+For Cordova plugin, refer to the documentation at: https://github.com/AppLozic/Applozic-Cordova-PhoneGap-Chat-Plugin/blob/master/README.md
+
+
+### Ionic web based Chat Plugin
+
+
 #### Step 1: Download plugin
 Copy [applozic folder](https://github.com/AppLozic/Applozic-Ionic-Chat-Plugin/tree/master/www/lib/applozic) containing js and css files into your project folder.
 
