@@ -881,7 +881,7 @@ Sample response:
 		    'pushNotificationFormat' : '2',
 		    'deviceType': '1',       //1 for Android, 4 for iOS
 		    'deviceApnsType' : '1', //1 for Distribution and 0 for Development APNS Certificate
-		    'appVersionCode': '106' 
+		    'appVersionCode': '108' 
 		  };
 		
 		$.ajax({
